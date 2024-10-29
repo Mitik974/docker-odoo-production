@@ -40,9 +40,9 @@ services:
     networks:
       - odoo
     restart: unless-stopped
-  proxy:
+  odoo-proxy:
     depends_on:
-            - web
+            - odoo-web
     container_name: odoo_proxy
     build:
         context: .
