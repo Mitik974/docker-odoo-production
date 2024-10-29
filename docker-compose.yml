@@ -15,7 +15,7 @@ services:
     networks:
       - odoo
   odoo-db:
-    image: postgres:17
+    image: postgres:latest
     container_name: db-odoo
     environment:
       - POSTGRES_DB=postgres
