@@ -60,5 +60,5 @@ volumes:
   odoo-web-data:
   odoo-db-data:
   odoo-config:
-  odoo-addon:
+  odoo-addons:
   odoo-pgadmin:
