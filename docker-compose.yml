@@ -4,7 +4,7 @@ services:
     image: odoo:18
     container_name: web-odoo
     depends_on:
-      - db
+      - odoo-db
     volumes:
       - odoo-web-data:/var/lib/odoo
       - odoo-config:/etc/odoo
