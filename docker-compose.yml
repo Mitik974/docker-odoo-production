@@ -1,21 +1,21 @@
 version: "3.1"
 services:
-  web:
-    image: odoo:16
+  odoo-web:
+    image: odoo:18
     container_name: web-odoo
     depends_on:
       - db
     volumes:
       - odoo-web-data:/var/lib/odoo
-      - ./config:/etc/odoo
-      - ./local-addons:/mnt/extra-addons
+      - odoo-config:/etc/odoo
+      - odoo-addons:/mnt/extra-addons
     environment:
       - USER=odoo
       - PASSWORD=odoo
     networks:
       - odoo
-  db:
-    image: postgres:13
+  odoo-db:
+    image: postgres:17
     container_name: db-odoo
     environment:
       - POSTGRES_DB=postgres
@@ -56,8 +56,9 @@ networks:
   odoo:
     driver: bridge
 
-
 volumes:
   odoo-web-data:
   odoo-db-data:
+  odoo-config:
+  odoo-addon:
   pgadmin:
