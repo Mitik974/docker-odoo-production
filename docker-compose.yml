@@ -34,7 +34,7 @@ services:
       PGADMIN_DEFAULT_PASSWORD: admin
       PGADMIN_CONFIG_SERVER_MODE: 'False'
     volumes:
-       - pgadmin:/var/lib/pgadmin
+       - odoo-pgadmin:/var/lib/pgadmin
     ports:
       - 5433:80
     networks:
@@ -61,4 +61,4 @@ volumes:
   odoo-db-data:
   odoo-config:
   odoo-addon:
-  pgadmin:
+  odoo-pgadmin:
